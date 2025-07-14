@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="DoorItemData" load_steps=7 format=3 uid="uid://dhfa2ax5istp6"]
+
+[ext_resource type="Script" uid="uid://i8dgp43l6lct" path="res://scripts/data/DoorItemData.cs" id="1_6hm3t"]
+[ext_resource type="Texture2D" uid="uid://ccv6wt5orraop" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_blackwood/wooden_walls_blackwood.png" id="1_iv088"]
+[ext_resource type="SpriteFrames" uid="uid://bey4jb7ncfgg8" path="res://assets/textures/props/doors/wooden_door_blackwood/wooden_door_blackwood_frames.tres" id="1_vm55w"]
+[ext_resource type="Texture2D" uid="uid://bswb15486i52a" path="res://assets/textures/props/doors/wooden_door_blackwood/wooden_door_blackwood.png" id="2_lcs0k"]
+[ext_resource type="PackedScene" uid="uid://wve4nryl0sp6" path="res://scenes/props/door_piece.tscn" id="3_cfy5j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tody"]
+atlas = ExtResource("2_lcs0k")
+region = Rect2(24, 376, 48, 48)
+
+[resource]
+script = ExtResource("1_6hm3t")
+AnimationFrames = ExtResource("1_vm55w")
+WallAtlas = ExtResource("1_iv088")
+ItemName = "Wooden Door (Blackwood)"
+MaterialType = 0
+Color = 0
+UniqueKey = ""
+Mode = 3
+Icon = SubResource("AtlasTexture_6tody")
+Quantity = 1
+StructureScene = ExtResource("3_cfy5j")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://i8dgp43l6lct"

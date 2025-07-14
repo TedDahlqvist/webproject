@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="RockItemData" load_steps=5 format=3 uid="uid://c64xyit8bes5h"]
+
+[ext_resource type="Script" uid="uid://dqev5otu5u7cp" path="res://scripts/data/RockItemData.cs" id="1_br3tl"]
+[ext_resource type="Texture2D" uid="uid://coaa2hr7ueull" path="res://assets/textures/props/rocks/rocks_32x_mountain_yellow_grey/rocks-32x-mountain_yellow_grey.png" id="1_lgq7f"]
+[ext_resource type="PackedScene" uid="uid://c41my8c5bkrnl" path="res://scenes/props/rock_piece.tscn" id="2_cse3h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04mbq"]
+atlas = ExtResource("1_lgq7f")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_br3tl")
+Atlas = ExtResource("1_lgq7f")
+Size = 0
+ItemName = "Small Rocks (Yellow)"
+Mode = 0
+Icon = SubResource("AtlasTexture_04mbq")
+Quantity = 1
+StructureScene = ExtResource("2_cse3h")
+metadata/_custom_type_script = "uid://dqev5otu5u7cp"

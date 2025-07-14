@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FenceItemData" load_steps=5 format=3 uid="uid://gpiac2mh6txp"]
+
+[ext_resource type="Texture2D" uid="uid://chrejnkijqsix" path="res://assets/textures/props/fences/sprites/wooden_fence/wooden_fence_murky_brown/icon_wooden_fence_murky_brown.png" id="1_og5lq"]
+[ext_resource type="Script" uid="uid://ceqsgf30v2yt6" path="res://scripts/data/FenceItemData.cs" id="1_wnv32"]
+[ext_resource type="Texture2D" uid="uid://bh77j8yrsobnv" path="res://assets/textures/props/fences/sprites/wooden_fence/wooden_fence_murky_brown/wooden_fence_murky_brown.png" id="2_b3lek"]
+[ext_resource type="PackedScene" uid="uid://cn04bkha806y1" path="res://scenes/props/fence_piece.tscn" id="3_ancu7"]
+
+[resource]
+script = ExtResource("1_wnv32")
+StructureAtlas = ExtResource("2_b3lek")
+ItemName = "Wooden Fence (Murky Brown)"
+Mode = 1
+Icon = ExtResource("1_og5lq")
+Quantity = 1
+StructureScene = ExtResource("3_ancu7")
+metadata/_custom_type_script = "uid://ceqsgf30v2yt6"

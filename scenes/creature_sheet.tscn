@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://donmrktsvlamv"]
+
+[ext_resource type="Script" uid="uid://c2rcfxjjkenj4" path="res://script/web/CreatureSheetGD.gd" id="1_2n0v4"]
+[ext_resource type="Texture2D" uid="uid://c0w7nfeepm20f" path="res://textures/shadows/shadow.png" id="1_m6yvc"]
+[ext_resource type="Texture2D" uid="uid://ilociedj0rsp" path="res://textures/actors/creatures/adult/adult-2/body/2-plain-body-side.png" id="2_geo6t"]
+[ext_resource type="Texture2D" uid="uid://d2xfxya8pkauw" path="res://textures/actors/creatures/adult/adult-2/legs/2-paws-side.png" id="3_geo6t"]
+[ext_resource type="Texture2D" uid="uid://b6dan5t3as48q" path="res://textures/actors/creatures/adult/adult-2/head/2-beak-plain-side.png" id="4_qcbtl"]
+[ext_resource type="Texture2D" uid="uid://c7oaa1cvuby07" path="res://textures/actors/creatures/adult/adult-2/head/2-eyes-red.png" id="5_3wqxf"]
+[ext_resource type="Texture2D" uid="uid://c7c37jqa7isxh" path="res://textures/actors/creatures/adult/adult-2/crown/2-bunny-2-plain-side.png" id="6_qcbtl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cchqr"]
+radius = 14.0
+
+[node name="CreatureSheet" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 11
+script = ExtResource("1_2n0v4")
+
+[node name="shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.843137)
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 19)
+scale = Vector2(0.828125, 0.796875)
+texture = ExtResource("1_m6yvc")
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_geo6t")
+
+[node name="LegSprite" type="Sprite2D" parent="."]
+texture = ExtResource("3_geo6t")
+
+[node name="HeadSprite" type="Sprite2D" parent="."]
+texture = ExtResource("4_qcbtl")
+
+[node name="EyeSprite" type="Sprite2D" parent="."]
+texture = ExtResource("5_3wqxf")
+
+[node name="CrownSprite" type="Sprite2D" parent="."]
+texture = ExtResource("6_qcbtl")
+
+[node name="CrownHindSprite" type="Sprite2D" parent="."]
+z_index = -1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 32)
+shape = SubResource("CircleShape2D_cchqr")

@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="FurnitureItemData" load_steps=13 format=3 uid="uid://exivyhsr1g45"]
+
+[ext_resource type="Texture2D" uid="uid://do7uiiv5876fa" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _96x32/table-medium-9ý.png" id="1_csckc"]
+[ext_resource type="Script" uid="uid://b5gjd705patw0" path="res://scripts/data/FurnitureItemData.cs" id="1_tr1c4"]
+[ext_resource type="PackedScene" uid="uid://61ireget7hk7" path="res://scenes/props/furniture_piece.tscn" id="2_ibys1"]
+[ext_resource type="Script" uid="uid://do5qwoghrm1tm" path="res://scripts/systems/placement/config/FurnitureFacingConfig.cs" id="2_xmb61"]
+[ext_resource type="Script" uid="uid://d3grgxjtdjkca" path="res://scripts/systems/placement/config/FurnitureDirectionEntry.cs" id="3_vtrsp"]
+
+[sub_resource type="Resource" id="Resource_7278a"]
+script = ExtResource("2_xmb61")
+OccupySizeTiles = Vector2i(3, 1)
+OccupyOffsetTiles = Vector2i(1, 0)
+GhostSizeTiles = Vector2i(3, 1)
+GhostOffset = Vector2(-46, -16)
+ColliderWidthPx = 104
+ColliderHeightPx = 28
+ColliderOffset = Vector2(0, 0)
+SpriteOffset = Vector2(0, -32)
+ShadowOffset = Vector2(0, -12)
+ShadowAlpha = 0.7
+ShadowScale = Vector2(0.7, 1.1)
+SpriteZIndex = 0
+ShadowZIndex = -1
+metadata/_custom_type_script = "uid://do5qwoghrm1tm"
+
+[sub_resource type="Resource" id="Resource_0a4jd"]
+script = ExtResource("3_vtrsp")
+Facing = 0
+Config = SubResource("Resource_7278a")
+metadata/_custom_type_script = "uid://d3grgxjtdjkca"
+
+[sub_resource type="Resource" id="Resource_jgqca"]
+script = ExtResource("3_vtrsp")
+Facing = 2
+Config = SubResource("Resource_7278a")
+metadata/_custom_type_script = "uid://d3grgxjtdjkca"
+
+[sub_resource type="Resource" id="Resource_8c15h"]
+script = ExtResource("2_xmb61")
+OccupySizeTiles = Vector2i(1, 3)
+OccupyOffsetTiles = Vector2i(0, 1)
+GhostSizeTiles = Vector2i(1, 3)
+GhostOffset = Vector2(-16, -48)
+ColliderWidthPx = 38
+ColliderHeightPx = 90
+ColliderOffset = Vector2(0, 0)
+SpriteOffset = Vector2(0, -32)
+ShadowOffset = Vector2(0, 0)
+ShadowAlpha = 0.7
+ShadowScale = Vector2(0.6, 0.6)
+SpriteZIndex = 0
+ShadowZIndex = -1
+metadata/_custom_type_script = "uid://do5qwoghrm1tm"
+
+[sub_resource type="Resource" id="Resource_ykx57"]
+script = ExtResource("3_vtrsp")
+Facing = 1
+Config = SubResource("Resource_8c15h")
+metadata/_custom_type_script = "uid://d3grgxjtdjkca"
+
+[sub_resource type="Resource" id="Resource_8tbas"]
+script = ExtResource("3_vtrsp")
+Facing = 3
+Config = SubResource("Resource_8c15h")
+metadata/_custom_type_script = "uid://d3grgxjtdjkca"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfur8"]
+atlas = ExtResource("1_csckc")
+
+[resource]
+script = ExtResource("1_tr1c4")
+DirectionConfigs = Array[Object]([SubResource("Resource_0a4jd"), SubResource("Resource_jgqca"), SubResource("Resource_ykx57"), SubResource("Resource_8tbas")])
+SpriteSize = Vector2i(32, 32)
+ItemName = "Shoddy Table (Murky Brown)"
+MaterialType = 0
+Color = 2
+UniqueKey = ""
+Mode = 10
+Icon = SubResource("AtlasTexture_yfur8")
+Quantity = 1
+StructureScene = ExtResource("2_ibys1")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b5gjd705patw0"

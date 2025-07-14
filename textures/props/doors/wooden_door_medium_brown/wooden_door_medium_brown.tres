@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="DoorItemData" load_steps=7 format=3 uid="uid://hsef4lajfynx"]
+
+[ext_resource type="SpriteFrames" uid="uid://6ii0ablga14i" path="res://assets/textures/props/doors/wooden_door_medium_brown/wooden_door_medium_brown_door_frames.tres" id="1_1gotd"]
+[ext_resource type="Script" uid="uid://i8dgp43l6lct" path="res://scripts/data/DoorItemData.cs" id="1_4fk2g"]
+[ext_resource type="Texture2D" uid="uid://cohqbk5bb0kmv" path="res://assets/textures/props/doors/wooden_door_medium_brown/wooden_door_medium_brown.png" id="2_dui10"]
+[ext_resource type="PackedScene" uid="uid://wve4nryl0sp6" path="res://scenes/props/door_piece.tscn" id="4_2dpa0"]
+[ext_resource type="Texture2D" uid="uid://gs07umhfgcq1" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_medium_brown/wooden_walls_medium_brown.png" id="5_c603f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gotd"]
+atlas = ExtResource("2_dui10")
+region = Rect2(24, 376, 48, 48)
+
+[resource]
+script = ExtResource("1_4fk2g")
+AnimationFrames = ExtResource("1_1gotd")
+WallAtlas = ExtResource("5_c603f")
+ItemName = "Wooden Door (Medium Brown)"
+MaterialType = 0
+Color = 2
+UniqueKey = ""
+Mode = 3
+Icon = SubResource("AtlasTexture_1gotd")
+Quantity = 1
+StructureScene = ExtResource("4_2dpa0")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://i8dgp43l6lct"

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GateItemData" load_steps=6 format=3 uid="uid://e7h7hep52f6u"]
+
+[ext_resource type="SpriteFrames" uid="uid://cquebro25rc4t" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_medium_brown/shoddy_wooden_fence_gate_medium_brown_frames.tres" id="1_8t5hd"]
+[ext_resource type="Script" uid="uid://b6nmjrgglf5pg" path="res://scripts/data/GateItemData.cs" id="1_ek1ar"]
+[ext_resource type="Texture2D" uid="uid://d1sjdq047cmul" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_medium_brown/shoddy_wooden_fence_gate_medium_brown.png" id="2_ydsot"]
+[ext_resource type="PackedScene" uid="uid://b58avry70crcj" path="res://scenes/props/gate_piece.tscn" id="3_ydsot"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtog7"]
+atlas = ExtResource("2_ydsot")
+region = Rect2(24, 416, 48, 56)
+
+[resource]
+script = ExtResource("1_ek1ar")
+AnimationFrames = ExtResource("1_8t5hd")
+FencePostSpriteSheet = ExtResource("2_ydsot")
+ItemName = "Wooden Gate (Medium Brown)"
+MaterialType = 0
+Color = 2
+UniqueKey = ""
+Mode = 12
+Icon = SubResource("AtlasTexture_vtog7")
+Quantity = 1
+StructureScene = ExtResource("3_ydsot")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b6nmjrgglf5pg"

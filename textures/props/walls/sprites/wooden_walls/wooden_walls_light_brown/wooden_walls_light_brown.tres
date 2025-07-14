@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WallItemData" load_steps=5 format=3 uid="uid://ca3cbwk1fc6y8"]
+
+[ext_resource type="Script" uid="uid://cui222twplc68" path="res://scripts/data/WallItemData.cs" id="1_ppwpr"]
+[ext_resource type="Texture2D" uid="uid://csadllb6tga2u" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_light_brown/wooden_walls_light_brown.png" id="2_17eeg"]
+[ext_resource type="PackedScene" uid="uid://bscogo3adpvbr" path="res://scenes/props/wall_piece.tscn" id="3_r5mxc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h56f"]
+atlas = ExtResource("2_17eeg")
+region = Rect2(80, 16, 32, 32)
+
+[resource]
+script = ExtResource("1_ppwpr")
+StructureAtlas = ExtResource("2_17eeg")
+ItemName = "Wooden Wall (Light Brown)"
+Mode = 2
+Icon = SubResource("AtlasTexture_3h56f")
+Quantity = 1
+StructureScene = ExtResource("3_r5mxc")
+metadata/_custom_type_script = "uid://cui222twplc68"

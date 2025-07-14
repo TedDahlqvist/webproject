@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GateItemData" load_steps=6 format=3 uid="uid://du347gbhddcet"]
+
+[ext_resource type="Script" uid="uid://b6nmjrgglf5pg" path="res://scripts/data/GateItemData.cs" id="1_fb8po"]
+[ext_resource type="SpriteFrames" uid="uid://beqm1cnuoxnnx" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_blackwood/shoddy_wooden_fence_gate_blackwood_frames.tres" id="1_wqub2"]
+[ext_resource type="Texture2D" uid="uid://cth21362q38ln" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_blackwood/shoddy_wooden_fence_gate_blackwood.png" id="2_jfcns"]
+[ext_resource type="PackedScene" uid="uid://b58avry70crcj" path="res://scenes/props/gate_piece.tscn" id="3_pxr73"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa8lk"]
+atlas = ExtResource("2_jfcns")
+region = Rect2(24, 160, 48, 56)
+
+[resource]
+script = ExtResource("1_fb8po")
+AnimationFrames = ExtResource("1_wqub2")
+FencePostSpriteSheet = ExtResource("2_jfcns")
+ItemName = "Wooden Gate (Blackwood)"
+MaterialType = 0
+Color = 0
+UniqueKey = ""
+Mode = 12
+Icon = SubResource("AtlasTexture_aa8lk")
+Quantity = 1
+StructureScene = ExtResource("3_pxr73")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b6nmjrgglf5pg"

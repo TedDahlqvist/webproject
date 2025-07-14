@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FurnitureDirectionEntry" load_steps=3 format=3 uid="uid://bj88hs753ph6a"]
+
+[ext_resource type="Resource" uid="uid://cynkyjj18munx" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/table_horizontal_config.tres" id="1_dkeom"]
+[ext_resource type="Script" uid="uid://d3grgxjtdjkca" path="res://scripts/systems/placement/config/FurnitureDirectionEntry.cs" id="2_jipva"]
+
+[resource]
+script = ExtResource("2_jipva")
+Facing = 3
+Config = ExtResource("1_dkeom")
+metadata/_custom_type_script = "uid://d3grgxjtdjkca"

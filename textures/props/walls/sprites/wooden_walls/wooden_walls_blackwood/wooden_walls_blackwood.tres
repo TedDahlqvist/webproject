@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WallItemData" load_steps=5 format=3 uid="uid://12kt4hvfo457"]
+
+[ext_resource type="Texture2D" uid="uid://ccv6wt5orraop" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_blackwood/wooden_walls_blackwood.png" id="1_m6pqi"]
+[ext_resource type="Script" uid="uid://cui222twplc68" path="res://scripts/data/WallItemData.cs" id="1_mf42h"]
+[ext_resource type="PackedScene" uid="uid://bscogo3adpvbr" path="res://scenes/props/wall_piece.tscn" id="2_b8of2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6frr"]
+atlas = ExtResource("1_m6pqi")
+region = Rect2(80, 16, 32, 32)
+
+[resource]
+script = ExtResource("1_mf42h")
+StructureAtlas = ExtResource("1_m6pqi")
+ItemName = "Wooden Wall (Blackwood)"
+MaterialType = 0
+Color = 2
+UniqueKey = ""
+Mode = 2
+Icon = SubResource("AtlasTexture_h6frr")
+Quantity = 1
+StructureScene = ExtResource("2_b8of2")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://cui222twplc68"

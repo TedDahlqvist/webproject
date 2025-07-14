@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="FurnitureItemData" load_steps=7 format=3 uid="uid://b1yq74nli4wtl"]
+
+[ext_resource type="Script" uid="uid://b5gjd705patw0" path="res://scripts/data/FurnitureItemData.cs" id="1_k0r5d"]
+[ext_resource type="Resource" uid="uid://2k877q6die8l" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _32x32/shoddy_wooden_table_32x32_config.tres" id="1_svib5"]
+[ext_resource type="Texture2D" uid="uid://bn4e05hq66onf" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _32x32/shoddy_wooden_table _32x32_blackwood/shoddy_wooden_table _32x32_blackwood.png" id="2_5pf2r"]
+[ext_resource type="Texture2D" uid="uid://c0w7nfeepm20f" path="res://assets/textures/shadows/shadow.png" id="3_vkq87"]
+[ext_resource type="PackedScene" uid="uid://61ireget7hk7" path="res://scenes/props/furniture_piece.tscn" id="4_3nmni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o7ts"]
+atlas = ExtResource("2_5pf2r")
+region = Rect2(16, 16, 32, 64)
+
+[resource]
+script = ExtResource("1_k0r5d")
+DirectionConfigs = null
+DefaultConfig = ExtResource("1_svib5")
+SpriteSheet = ExtResource("2_5pf2r")
+SpriteSize = Vector2i(64, 80)
+ShadowTexture = ExtResource("3_vkq87")
+ItemName = "Small Round Table (Blackwood)"
+MaterialType = 0
+Color = 0
+UniqueKey = ""
+Mode = 10
+Icon = SubResource("AtlasTexture_2o7ts")
+Quantity = 1
+StructureScene = ExtResource("4_3nmni")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b5gjd705patw0"

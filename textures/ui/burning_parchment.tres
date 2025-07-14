@@ -1,0 +1,36 @@
+[gd_resource type="AnimatedTexture" load_steps=7 format=3 uid="uid://b2toyecw0t25f"]
+
+[ext_resource type="Texture2D" uid="uid://cqucwsbiop8o5" path="res://assets/textures/ui/parchment-button burning-spritesheet.png" id="1_06d14"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5x5b"]
+atlas = ExtResource("1_06d14")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_govm5"]
+atlas = ExtResource("1_06d14")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m2lj"]
+atlas = ExtResource("1_06d14")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_232w2"]
+atlas = ExtResource("1_06d14")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkcqj"]
+atlas = ExtResource("1_06d14")
+region = Rect2(256, 0, 64, 64)
+
+[resource]
+frames = 5
+frame_0/texture = SubResource("AtlasTexture_q5x5b")
+frame_0/duration = 0.2
+frame_1/texture = SubResource("AtlasTexture_govm5")
+frame_1/duration = 0.2
+frame_2/texture = SubResource("AtlasTexture_6m2lj")
+frame_2/duration = 0.2
+frame_3/texture = SubResource("AtlasTexture_232w2")
+frame_3/duration = 0.2
+frame_4/texture = SubResource("AtlasTexture_dkcqj")
+frame_4/duration = 0.2

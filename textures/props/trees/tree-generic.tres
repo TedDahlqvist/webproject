@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://d1fscf1qs64iw"]
+
+[ext_resource type="Script" uid="uid://c0p7cym3h84gm" path="res://scripts/data/ItemData.cs" id="1_63r4j"]
+[ext_resource type="Texture2D" uid="uid://ce3cfkl4nn63b" path="res://assets/textures/props/trees/tree-generic 3.png" id="1_s80e5"]
+[ext_resource type="PackedScene" uid="uid://bbdbmissrmicv" path="res://scenes/props/tree_piece.tscn" id="3_om2qu"]
+
+[resource]
+script = ExtResource("1_63r4j")
+ItemName = "Tree"
+MaterialType = 0
+Color = 2
+UniqueKey = ""
+Mode = 4
+Icon = ExtResource("1_s80e5")
+Quantity = 1
+StructureScene = ExtResource("3_om2qu")
+Stackable = true
+MaxStack = 99

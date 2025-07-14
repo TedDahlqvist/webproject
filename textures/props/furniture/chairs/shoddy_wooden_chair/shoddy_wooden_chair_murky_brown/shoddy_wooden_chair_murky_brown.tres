@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="FurnitureItemData" load_steps=10 format=3 uid="uid://dotet0opueg7b"]
+
+[ext_resource type="Resource" uid="uid://howdr2wtnri4" path="res://assets/textures/props/furniture/chairs/shoddy_wooden_chair/chair_north.tres" id="1_4mn8j"]
+[ext_resource type="Texture2D" uid="uid://c0w7nfeepm20f" path="res://assets/textures/shadows/shadow.png" id="1_cmpuk"]
+[ext_resource type="Script" uid="uid://b5gjd705patw0" path="res://scripts/data/FurnitureItemData.cs" id="1_ho2bj"]
+[ext_resource type="Texture2D" uid="uid://cccjis6x3gm6a" path="res://assets/textures/props/furniture/chairs/shoddy_wooden_chair/shoddy_wooden_chair_murky_brown/shoddy_wooden_chair_murky_brown.png" id="1_qmkl0"]
+[ext_resource type="PackedScene" uid="uid://61ireget7hk7" path="res://scenes/props/furniture_piece.tscn" id="2_aqic8"]
+[ext_resource type="Resource" uid="uid://bap8yhjjc8r1h" path="res://assets/textures/props/furniture/chairs/shoddy_wooden_chair/chair_east.tres" id="2_co0uk"]
+[ext_resource type="Resource" uid="uid://bmyigmjc3d4hq" path="res://assets/textures/props/furniture/chairs/shoddy_wooden_chair/chair_south.tres" id="3_5xa4d"]
+[ext_resource type="Resource" uid="uid://dka4qepoomf7x" path="res://assets/textures/props/furniture/chairs/shoddy_wooden_chair/chair_west.tres" id="4_fa6s6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pquda"]
+atlas = ExtResource("1_qmkl0")
+region = Rect2(72, 16, 48, 64)
+
+[resource]
+script = ExtResource("1_ho2bj")
+DirectionConfigs = Array[Object]([ExtResource("1_4mn8j"), ExtResource("2_co0uk"), ExtResource("3_5xa4d"), ExtResource("4_fa6s6")])
+SpriteSheet = ExtResource("1_qmkl0")
+SpriteSize = Vector2i(64, 80)
+ShadowTexture = ExtResource("1_cmpuk")
+ItemName = "Shoddy Chair (Murky Brown)"
+MaterialType = 0
+Color = 5
+UniqueKey = ""
+Mode = 10
+Icon = SubResource("AtlasTexture_pquda")
+Quantity = 1
+StructureScene = ExtResource("2_aqic8")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b5gjd705patw0"

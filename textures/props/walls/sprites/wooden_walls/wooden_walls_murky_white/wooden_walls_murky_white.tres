@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WallItemData" load_steps=5 format=3 uid="uid://dwgdh1oumimcc"]
+
+[ext_resource type="Script" uid="uid://cui222twplc68" path="res://scripts/data/WallItemData.cs" id="1_fj45n"]
+[ext_resource type="Texture2D" uid="uid://bv3fdabil7uw" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_murky_white/wooden_walls_murky_white.png" id="2_gm4iw"]
+[ext_resource type="PackedScene" uid="uid://bscogo3adpvbr" path="res://scenes/props/wall_piece.tscn" id="3_gm4iw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l20xp"]
+atlas = ExtResource("2_gm4iw")
+region = Rect2(80, 16, 32, 32)
+
+[resource]
+script = ExtResource("1_fj45n")
+StructureAtlas = ExtResource("2_gm4iw")
+ItemName = "Wooden Wall (Murky White)"
+MaterialType = 0
+Color = 2
+UniqueKey = ""
+Mode = 2
+Icon = SubResource("AtlasTexture_l20xp")
+Quantity = 1
+StructureScene = ExtResource("3_gm4iw")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://cui222twplc68"

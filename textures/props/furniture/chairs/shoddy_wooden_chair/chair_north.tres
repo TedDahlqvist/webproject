@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="FurnitureDirectionEntry" load_steps=4 format=3 uid="uid://howdr2wtnri4"]
+
+[ext_resource type="Script" uid="uid://do5qwoghrm1tm" path="res://scripts/systems/placement/config/FurnitureFacingConfig.cs" id="3_0r513"]
+[ext_resource type="Script" uid="uid://d3grgxjtdjkca" path="res://scripts/systems/placement/config/FurnitureDirectionEntry.cs" id="4_2ejkh"]
+
+[sub_resource type="Resource" id="Resource_paayp"]
+script = ExtResource("3_0r513")
+OccupySizeTiles = Vector2i(1, 1)
+OccupyOffsetTiles = Vector2i(0, 0)
+GhostSizeTiles = Vector2i(1, 1)
+GhostOffset = Vector2(-16, -16)
+ColliderWidthPx = 28
+ColliderHeightPx = 24
+ColliderOffset = Vector2(0, -4)
+SpriteOffset = Vector2(0, -28)
+ShadowOffset = Vector2(0, -16)
+ShadowAlpha = 0.5
+ShadowScale = Vector2(1, 1)
+SpriteZIndex = 0
+ShadowZIndex = -1
+metadata/_custom_type_script = "uid://do5qwoghrm1tm"
+
+[resource]
+script = ExtResource("4_2ejkh")
+Facing = 0
+Config = SubResource("Resource_paayp")
+metadata/_custom_type_script = "uid://d3grgxjtdjkca"

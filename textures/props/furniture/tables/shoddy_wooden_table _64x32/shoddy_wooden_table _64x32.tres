@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="FurnitureItemData" load_steps=9 format=3 uid="uid://di67xc3cefhcq"]
+
+[ext_resource type="Script" uid="uid://b5gjd705patw0" path="res://scripts/data/FurnitureItemData.cs" id="1_3pcya"]
+[ext_resource type="Resource" uid="uid://crfve27cdkk4r" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/north.tres" id="1_u62go"]
+[ext_resource type="Resource" uid="uid://c7qgwtfrrxpxs" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/east.tres" id="2_6uoxp"]
+[ext_resource type="Texture2D" uid="uid://dp3a8xngeearw" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/shoddy_wooden_table _64x32.png" id="2_u62go"]
+[ext_resource type="Resource" uid="uid://bjmq0crmyh023" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/south.tres" id="3_k4m8d"]
+[ext_resource type="Resource" uid="uid://bj88hs753ph6a" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/west.tres" id="4_0e63v"]
+[ext_resource type="PackedScene" uid="uid://61ireget7hk7" path="res://scenes/props/furniture_piece.tscn" id="5_0e63v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbojx"]
+atlas = ExtResource("2_u62go")
+region = Rect2(16, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_3pcya")
+DirectionConfigs = Array[Object]([ExtResource("1_u62go"), ExtResource("2_6uoxp"), ExtResource("3_k4m8d"), ExtResource("4_0e63v")])
+SpriteSheet = ExtResource("2_u62go")
+SpriteSize = Vector2i(96, 128)
+ItemName = "Shoddy Table"
+MaterialType = 0
+Color = 5
+Mode = 10
+Icon = SubResource("AtlasTexture_cbojx")
+Quantity = 1
+StructureScene = ExtResource("5_0e63v")
+metadata/_custom_type_script = "uid://b5gjd705patw0"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SharedFurnitureConfig" load_steps=2 format=3 uid="uid://chair_south_shared_config"]
+
+[ext_resource type="Script" path="res://scripts/systems/placement/config/SharedFurnitureConfig.cs" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+OccupySizeTiles = Vector2i(1, 1)
+OccupyOffsetTiles = Vector2i(0, 0)
+GhostSizeTiles = Vector2i(1, 1)
+GhostOffset = Vector2(-16, -16)
+ColliderWidthPx = 28
+ColliderHeightPx = 24
+ColliderOffset = Vector2(0, 4)
+SpriteOffset = Vector2(0, 28)
+ShadowOffset = Vector2(0, 16)
+ShadowAlpha = 0.5
+ShadowScale = Vector2(1, 1)
+SpriteZIndex = 0
+ShadowZIndex = -1

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FenceItemData" load_steps=5 format=3 uid="uid://dasupiret67h1"]
+
+[ext_resource type="Script" uid="uid://ceqsgf30v2yt6" path="res://scripts/data/FenceItemData.cs" id="1_hy0w0"]
+[ext_resource type="Texture2D" uid="uid://c5cn7bm7a6p0t" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence/shoddy_wooden_fence_blackwood/shoddy_wooden_fence_blackwood.png" id="1_w5bsw"]
+[ext_resource type="PackedScene" uid="uid://cn04bkha806y1" path="res://scenes/props/fence_piece.tscn" id="2_w24a0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m4v6"]
+atlas = ExtResource("1_w5bsw")
+region = Rect2(8, 64, 40, 56)
+
+[resource]
+script = ExtResource("1_hy0w0")
+StructureAtlas = ExtResource("1_w5bsw")
+ItemName = "Shoddy Fence (Blackwood)"
+MaterialType = 0
+Color = 0
+UniqueKey = ""
+Mode = 1
+Icon = SubResource("AtlasTexture_3m4v6")
+Quantity = 1
+StructureScene = ExtResource("2_w24a0")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://ceqsgf30v2yt6"

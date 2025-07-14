@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="DoorItemData" load_steps=7 format=3 uid="uid://bk1iwl68ps86t"]
+
+[ext_resource type="Script" uid="uid://i8dgp43l6lct" path="res://scripts/data/DoorItemData.cs" id="1_mhtv7"]
+[ext_resource type="SpriteFrames" uid="uid://dalajurd4hr1r" path="res://assets/textures/props/doors/wooden_door_murky_white/wooden_door_murky_white_door_frames.tres" id="1_ytfhj"]
+[ext_resource type="Texture2D" uid="uid://cy04cbwinu40m" path="res://assets/textures/props/doors/wooden_door_murky_white/wooden_door_murky_white.png" id="2_28qj3"]
+[ext_resource type="PackedScene" uid="uid://wve4nryl0sp6" path="res://scenes/props/door_piece.tscn" id="4_01lty"]
+[ext_resource type="Texture2D" uid="uid://bv3fdabil7uw" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_murky_white/wooden_walls_murky_white.png" id="5_kc2qu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytfhj"]
+atlas = ExtResource("2_28qj3")
+region = Rect2(24, 376, 48, 48)
+
+[resource]
+script = ExtResource("1_mhtv7")
+AnimationFrames = ExtResource("1_ytfhj")
+WallAtlas = ExtResource("5_kc2qu")
+ItemName = "Wooden Door (Murky White)"
+MaterialType = 0
+Color = 6
+UniqueKey = ""
+Mode = 3
+Icon = SubResource("AtlasTexture_ytfhj")
+Quantity = 1
+StructureScene = ExtResource("4_01lty")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://i8dgp43l6lct"

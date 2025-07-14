@@ -1,0 +1,172 @@
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://dflhtpt16hoox"]
+
+[ext_resource type="Texture2D" uid="uid://bmw6jwry4yirw" path="res://assets/textures/props/furniture/wardrobe/shoddy_wooden_wardrobe_medium_brown/shoddy_wooden_wardrobe_medium_brown.png" id="1_1d7pa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d7pa"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(64, 256, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5crcc"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(64, 128, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vpyo"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(64, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0jf1"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(0, 256, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofkrc"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(0, 128, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6bj8"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ot6sx"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(128, 256, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukqd4"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(128, 128, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v58h6"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(128, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtyxa"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(192, 256, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbs46"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(192, 128, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct6h4"]
+atlas = ExtResource("1_1d7pa")
+region = Rect2(192, 0, 64, 128)
+
+[resource]
+resource_name = "shoddy_wooden_wardrobe_medium_brown_frames"
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_1d7pa")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_5crcc")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_1vpyo")
+}],
+"loop": false,
+"name": &"wardrobe_closing_east",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_m0jf1")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_ofkrc")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_y6bj8")
+}],
+"loop": false,
+"name": &"wardrobe_closing_north",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_ot6sx")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_ukqd4")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_v58h6")
+}],
+"loop": false,
+"name": &"wardrobe_closing_south",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_qtyxa")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_fbs46")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ct6h4")
+}],
+"loop": false,
+"name": &"wardrobe_closing_west",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_1vpyo")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_5crcc")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_1d7pa")
+}],
+"loop": false,
+"name": &"wardrobe_opening_east",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_y6bj8")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_ofkrc")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_m0jf1")
+}],
+"loop": false,
+"name": &"wardrobe_opening_north",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_v58h6")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_ukqd4")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_ot6sx")
+}],
+"loop": false,
+"name": &"wardrobe_opening_south",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ct6h4")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_fbs46")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_qtyxa")
+}],
+"loop": false,
+"name": &"wardrobe_opening_west",
+"speed": 5.0
+}]

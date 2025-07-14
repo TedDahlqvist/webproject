@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FenceItemData" load_steps=5 format=3 uid="uid://bic8yknq37ihe"]
+
+[ext_resource type="Texture2D" uid="uid://boea31li7saqt" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence/shoddy_wooden_fence_murky_white/shoddy_wooden_fence_murky_white.png" id="2_h35eu"]
+[ext_resource type="PackedScene" uid="uid://cn04bkha806y1" path="res://scenes/props/fence_piece.tscn" id="3_hoodb"]
+[ext_resource type="Script" uid="uid://ceqsgf30v2yt6" path="res://scripts/data/FenceItemData.cs" id="4_vbikw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30ren"]
+atlas = ExtResource("2_h35eu")
+region = Rect2(8, 64, 40, 56)
+
+[resource]
+script = ExtResource("4_vbikw")
+StructureAtlas = ExtResource("2_h35eu")
+ItemName = "Shoddy Fence (Murky White)"
+MaterialType = 0
+Color = 6
+UniqueKey = ""
+Mode = 1
+Icon = SubResource("AtlasTexture_30ren")
+Quantity = 1
+StructureScene = ExtResource("3_hoodb")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://ceqsgf30v2yt6"

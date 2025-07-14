@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="DoorItemData" load_steps=7 format=3 uid="uid://cy5i8sc08f4n7"]
+
+[ext_resource type="SpriteFrames" uid="uid://f3nm54bbncgf" path="res://assets/textures/props/doors/wooden_door_pinkish_brown/wooden_door_pinkish_brown_frames.tres" id="1_k1y7x"]
+[ext_resource type="Script" uid="uid://i8dgp43l6lct" path="res://scripts/data/DoorItemData.cs" id="1_uvc40"]
+[ext_resource type="Texture2D" uid="uid://b6yequffp1ff1" path="res://assets/textures/props/doors/wooden_door_pinkish_brown/wooden_door_pinkish_brown.png" id="2_75yfn"]
+[ext_resource type="PackedScene" uid="uid://wve4nryl0sp6" path="res://scenes/props/door_piece.tscn" id="3_mnj21"]
+[ext_resource type="Texture2D" uid="uid://bvuxw16t7dyni" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_pinkish_brown/wooden_walls_pinkish_brown.png" id="4_cm1q4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2ou3"]
+atlas = ExtResource("2_75yfn")
+region = Rect2(24, 376, 48, 48)
+
+[resource]
+script = ExtResource("1_uvc40")
+AnimationFrames = ExtResource("1_k1y7x")
+WallAtlas = ExtResource("4_cm1q4")
+ItemName = "Wooden Door (Pinkish Brown)"
+MaterialType = 0
+Color = 4
+UniqueKey = ""
+Mode = 3
+Icon = SubResource("AtlasTexture_s2ou3")
+Quantity = 1
+StructureScene = ExtResource("3_mnj21")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://i8dgp43l6lct"

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GateItemData" load_steps=6 format=3 uid="uid://2s8ihjn8gyus"]
+
+[ext_resource type="SpriteFrames" uid="uid://dwg55yi2hoid" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_murky_brown/shoddy_wooden_fence_gate_murky_brown_frames.tres" id="1_s3w7p"]
+[ext_resource type="Script" uid="uid://b6nmjrgglf5pg" path="res://scripts/data/GateItemData.cs" id="1_ylinp"]
+[ext_resource type="Texture2D" uid="uid://cnq68rguijfeg" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_murky_brown/shoddy_wooden_fence_gate_murky_brown.png" id="2_jk6p2"]
+[ext_resource type="PackedScene" uid="uid://b58avry70crcj" path="res://scenes/props/gate_piece.tscn" id="3_jk6p2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d62v"]
+atlas = ExtResource("2_jk6p2")
+region = Rect2(24, 416, 48, 56)
+
+[resource]
+script = ExtResource("1_ylinp")
+AnimationFrames = ExtResource("1_s3w7p")
+FencePostSpriteSheet = ExtResource("2_jk6p2")
+ItemName = "Wooden Gate (Murky Brown)"
+MaterialType = 0
+Color = 5
+UniqueKey = ""
+Mode = 12
+Icon = SubResource("AtlasTexture_3d62v")
+Quantity = 1
+StructureScene = ExtResource("3_jk6p2")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b6nmjrgglf5pg"

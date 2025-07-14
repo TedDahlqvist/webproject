@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="FurnitureItemData" load_steps=10 format=3 uid="uid://dgpg5athrdjhx"]
+
+[ext_resource type="Script" uid="uid://b5gjd705patw0" path="res://scripts/data/FurnitureItemData.cs" id="1_iyytb"]
+[ext_resource type="Resource" uid="uid://crfve27cdkk4r" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/north.tres" id="1_ntkdv"]
+[ext_resource type="Resource" uid="uid://c7qgwtfrrxpxs" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/east.tres" id="2_x5jq7"]
+[ext_resource type="Resource" uid="uid://bjmq0crmyh023" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/south.tres" id="3_rjq4q"]
+[ext_resource type="Resource" uid="uid://bj88hs753ph6a" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/west.tres" id="4_yxqmy"]
+[ext_resource type="Texture2D" uid="uid://dad0sjijmcelj" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/shoddy_wooden_table _64x32_pinkish_brown/shoddy_wooden_table _64x32_pinkish_brown.png" id="5_8j0kc"]
+[ext_resource type="PackedScene" uid="uid://61ireget7hk7" path="res://scenes/props/furniture_piece.tscn" id="6_6ugwc"]
+[ext_resource type="Texture2D" uid="uid://bgr7nn2sxir5c" path="res://assets/textures/shadows/shadow_64x32_square.png" id="6_x5jq7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w82hs"]
+atlas = ExtResource("5_8j0kc")
+region = Rect2(16, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_iyytb")
+DirectionConfigs = Array[Object]([ExtResource("1_ntkdv"), ExtResource("2_x5jq7"), ExtResource("3_rjq4q"), ExtResource("4_yxqmy")])
+SpriteSheet = ExtResource("5_8j0kc")
+SpriteSize = Vector2i(96, 128)
+ShadowTexture = ExtResource("6_x5jq7")
+ItemName = "Medium Table (Pinkish Brown)"
+MaterialType = 0
+Color = 4
+UniqueKey = ""
+Mode = 10
+Icon = SubResource("AtlasTexture_w82hs")
+Quantity = 1
+StructureScene = ExtResource("6_6ugwc")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b5gjd705patw0"

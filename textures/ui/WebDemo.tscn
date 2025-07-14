@@ -1,0 +1,416 @@
+[gd_scene load_steps=11 format=4 uid="uid://bkxqvwh8n6y8r"]
+
+[ext_resource type="Script" uid="uid://np11504a4d75" path="res://scripts/web/WebDemoControllerGD.gd" id="1_02ji8"]
+[ext_resource type="Texture2D" uid="uid://sgyjiu8nsb2k" path="res://assets/textures/ui/ui-64-leather-3x3-darkened.png" id="2_cfseo"]
+[ext_resource type="Shader" uid="uid://bsslbt56gg4kg" path="res://scenes/levels/kiddieland.gdshader" id="3_02ji8"]
+[ext_resource type="TileSet" uid="uid://clfhqmdnsj4ia" path="res://assets/tilesets/grass/mellow/grass-pale-moody-shared.tres" id="4_atgh0"]
+[ext_resource type="PackedScene" uid="uid://donmrktsvlamv" path="res://scenes/actors/creature_sheet.tscn" id="5_0dbfr"]
+[ext_resource type="Script" uid="uid://c2rcfxjjkenj4" path="res://scripts/web/CreatureSheetGD.gd" id="5_atgh0"]
+[ext_resource type="Texture2D" uid="uid://c8elry74sdocm" path="res://assets/textures/ui/ui-64-leather-3x3.png" id="6_cfseo"]
+[ext_resource type="Theme" uid="uid://b5wnqeouqf2bv" path="res://assets/textures/ui/ui_theme/ui_theme.tres" id="6_dwmua"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mbeka"]
+shader = ExtResource("3_02ji8")
+shader_parameter/u_contrast = 1.071
+shader_parameter/u_saturation = 1.167
+shader_parameter/u_hue_shift = 0.0
+shader_parameter/u_brightness = 0.024
+shader_parameter/u_dreaminess = 0.085
+
+[sub_resource type="LabelSettings" id="LabelSettings_1x8vq"]
+font_size = 24
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="WebDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02ji8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 100
+material = SubResource("ShaderMaterial_mbeka")
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -151.0
+offset_right = -851.0
+offset_bottom = -244.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.73951, 1.69733)
+mouse_filter = 2
+
+[node name="Background" type="TileMapLayer" parent="."]
+z_index = -10
+texture_filter = 1
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAAHAAUAAQACAAEAAAAHAAQAAQACAAEAAAAHAAMAAQACAAEAAAAHAAIAAQACAAEAAAAHAAEAAQACAAEAAAAHAAAAAQACAAEAAAAGAAUAAQACAAEAAAAGAAQAAQACAAEAAAAGAAMAAQACAAEAAAAGAAIAAQACAAEAAAAGAAEAAQACAAEAAAAGAAAAAQACAAEAAAAFAAUAAQACAAEAAAAFAAQAAQACAAEAAAAFAAMAAQACAAEAAAAFAAIAAQACAAEAAAAFAAEAAQACAAEAAAAFAAAAAQACAAEAAAAEAAUAAQACAAEAAAAEAAQAAQACAAEAAAAEAAMAAQACAAEAAAAEAAIAAQACAAEAAAAEAAEAAQACAAEAAAAEAAAAAQACAAEAAAADAAUAAQACAAEAAAADAAQAAQACAAEAAAADAAMAAQACAAEAAAADAAIAAQACAAEAAAADAAEAAQACAAEAAAADAAAAAQACAAEAAAACAAUAAQACAAEAAAACAAQAAQACAAEAAAACAAMAAQACAAEAAAACAAIAAQACAAEAAAACAAEAAQACAAEAAAACAAAAAQACAAEAAAAHAP//AQACAAAAAAAGAP//AQACAAAAAAAFAP//AQACAAAAAAAEAP//AQACAAAAAAADAP//AQACAAAAAAACAP//AQACAAAAAAAAAP//AQACAAAAAAAJAAUAAQACAAEAAAAJAAQAAQACAAEAAAAJAAMAAQACAAEAAAAJAAIAAQACAAEAAAAJAAEAAQACAAEAAAAJAAAAAQACAAEAAAAJAP//AQACAAAAAAAIAAUAAQACAAEAAAAIAAQAAQACAAEAAAAIAAMAAQACAAEAAAAIAAIAAQACAAEAAAAIAAEAAQACAAEAAAAIAAAAAQACAAEAAAAIAP//AQACAAAAAAABAAUAAQACAAEAAAABAAQAAQACAAEAAAABAAMAAQACAAEAAAABAAIAAQACAAEAAAABAAEAAQACAAEAAAABAAAAAQACAAEAAAABAP//AQACAAAAAAAAAAUAAQACAAEAAAAAAAQAAQACAAEAAAAAAAMAAQACAAEAAAAAAAIAAQACAAEAAAAAAAEAAQACAAEAAAAAAAAAAQACAAEAAAAKAAYAAQADAAIAAAAKAAUAAQADAAEAAAAKAAQAAQADAAEAAAAKAAMAAQADAAEAAAAKAAIAAQADAAEAAAAKAAEAAQADAAEAAAAKAAAAAQADAAEAAAAKAP//AQADAAAAAAAJAAYAAQACAAIAAAAIAAYAAQACAAIAAAAHAAYAAQACAAIAAAAGAAYAAQACAAIAAAAFAAYAAQACAAIAAAAEAAYAAQACAAIAAAADAAYAAQACAAIAAAACAAYAAQACAAIAAAABAAYAAQACAAIAAAAAAAYAAQACAAIAAAD//wYAAQABAAIAAAD//wUAAQABAAEAAAD//wQAAQABAAEAAAD//wMAAQABAAEAAAD//wIAAQABAAEAAAD//wEAAQABAAEAAAD//wAAAQABAAEAAAD/////AQABAAAAAAA=")
+tile_set = ExtResource("4_atgh0")
+
+[node name="MainContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreatureDisplay" type="VBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="MainContainer/CreatureDisplay"]
+layout_mode = 2
+text = "🐾 Creature Generator"
+label_settings = SubResource("LabelSettings_1x8vq")
+horizontal_alignment = 1
+
+[node name="DisplayArea" type="Control" parent="MainContainer/CreatureDisplay"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CreatureSheet" parent="MainContainer/CreatureDisplay/DisplayArea" instance=ExtResource("5_0dbfr")]
+position = Vector2(310, 279)
+scale = Vector2(4, 4)
+script = ExtResource("5_atgh0")
+current_config = null
+
+[node name="shadow" parent="MainContainer/CreatureDisplay/DisplayArea/CreatureSheet" index="0"]
+position = Vector2(2, 18.75)
+
+[node name="CollisionShape2D" parent="MainContainer/CreatureDisplay/DisplayArea/CreatureSheet" index="7"]
+visible = false
+
+[node name="InfoLabel" type="Label" parent="MainContainer/CreatureDisplay"]
+layout_mode = 2
+text = "Click randomize to generate a new creature!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_cfseo")
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="VSplitContainer" type="VSplitContainer" parent="MainContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsMarginContainer" type="MarginContainer" parent="MainContainer/NinePatchRect/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 35
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_cfseo")
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="MarginContainer" type="MarginContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="ControlsScrollContainer" type="ScrollContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+
+[node name="ControlsContainer" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("6_dwmua")
+
+[node name="PaletteSection" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="PaletteLabel" type="Label" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection"]
+layout_mode = 2
+text = "🎨 Color Palettes"
+
+[node name="ColorVariationsCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection"]
+layout_mode = 2
+text = "Enable Color Variations"
+
+[node name="PaletteContainer" type="GridContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection"]
+layout_mode = 2
+columns = 2
+
+[node name="NaturalCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection/PaletteContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Natural"
+
+[node name="BlueCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection/PaletteContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Blue"
+
+[node name="BrownCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection/PaletteContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Brown"
+
+[node name="GreenCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection/PaletteContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Green"
+
+[node name="GreyscaleCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection/PaletteContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Greyscale"
+
+[node name="PurpleCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection/PaletteContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Purple"
+
+[node name="RedCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/PaletteSection/PaletteContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Red"
+
+[node name="HSeparator1" type="HSeparator" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="SaturationSection" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="SaturationLabel" type="Label" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/SaturationSection"]
+layout_mode = 2
+text = "🌈 Saturation Levels"
+
+[node name="SaturationContainer" type="GridContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/SaturationSection"]
+layout_mode = 2
+columns = 2
+
+[node name="Saturation1Checkbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/SaturationSection/SaturationContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Level 1"
+
+[node name="Saturation2Checkbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/SaturationSection/SaturationContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Level 2"
+
+[node name="Saturation3Checkbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/SaturationSection/SaturationContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Level 3"
+
+[node name="Saturation4Checkbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/SaturationSection/SaturationContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Level 4"
+
+[node name="HSeparator2" type="HSeparator" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="FurSection" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="FurLabel" type="Label" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FurSection"]
+layout_mode = 2
+text = "🐻 Fur Types"
+
+[node name="FurContainer" type="GridContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FurSection"]
+layout_mode = 2
+columns = 3
+
+[node name="PlainFurCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FurSection/FurContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Plain"
+
+[node name="FuzzyFurCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FurSection/FurContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Fuzzy"
+
+[node name="ScalesFurCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FurSection/FurContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Scales"
+
+[node name="HSeparator3" type="HSeparator" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="AgeSection" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="AgeLabel" type="Label" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/AgeSection"]
+layout_mode = 2
+text = "🐣 Age Groups"
+
+[node name="AgeContainer" type="GridContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/AgeSection"]
+layout_mode = 2
+columns = 3
+
+[node name="YoungAdultCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/AgeSection/AgeContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Young Adult"
+
+[node name="MidAdultCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/AgeSection/AgeContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Mid Adult"
+
+[node name="FullAdultCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/AgeSection/AgeContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Full Adult"
+
+[node name="HSeparator4" type="HSeparator" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="FaceSection" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="FaceLabel" type="Label" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FaceSection"]
+layout_mode = 2
+text = "😄 Face Attributes"
+
+[node name="FaceContainer" type="GridContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FaceSection"]
+layout_mode = 2
+columns = 2
+
+[node name="FaceStrengthCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FaceSection/FaceContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Strength"
+
+[node name="FaceIntelligenceCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FaceSection/FaceContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Intelligence"
+
+[node name="FaceDexterityCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FaceSection/FaceContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Dexterity"
+
+[node name="FaceBalanceCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FaceSection/FaceContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Balance"
+
+[node name="HSeparator5" type="HSeparator" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="FeetSection" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="FeetLabel" type="Label" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FeetSection"]
+layout_mode = 2
+text = "🦶 Feet Attributes"
+
+[node name="FeetContainer" type="GridContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FeetSection"]
+layout_mode = 2
+columns = 2
+
+[node name="FeetStrengthCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FeetSection/FeetContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Strength"
+
+[node name="FeetIntelligenceCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FeetSection/FeetContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Intelligence"
+
+[node name="FeetDexterityCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FeetSection/FeetContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Dexterity"
+
+[node name="FeetBalanceCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/FeetSection/FeetContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Balance"
+
+[node name="HSeparator6" type="HSeparator" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="CrownSection" type="VBoxContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer"]
+layout_mode = 2
+
+[node name="CrownLabel" type="Label" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/CrownSection"]
+layout_mode = 2
+text = "👑 Crown Attributes"
+
+[node name="CrownContainer" type="GridContainer" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/CrownSection"]
+layout_mode = 2
+columns = 2
+
+[node name="CrownStrengthCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/CrownSection/CrownContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Strength"
+
+[node name="CrownIntelligenceCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/CrownSection/CrownContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Intelligence"
+
+[node name="CrownDexterityCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/CrownSection/CrownContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Dexterity"
+
+[node name="CrownBalanceCheckbox" type="CheckBox" parent="MainContainer/NinePatchRect/VSplitContainer/SettingsMarginContainer/NinePatchRect/MarginContainer/ControlsScrollContainer/ControlsContainer/CrownSection/CrownContainer"]
+layout_mode = 2
+button_pressed = true
+text = "Balance"
+
+[node name="GenerateButtonMargins" type="MarginContainer" parent="MainContainer/NinePatchRect/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="RandomizeButton" type="Button" parent="MainContainer/NinePatchRect/VSplitContainer/GenerateButtonMargins"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("6_dwmua")
+text = "🎲 Randomize Creature!"
+
+[connection signal="pressed" from="MainContainer/NinePatchRect/VSplitContainer/GenerateButtonMargins/RandomizeButton" to="." method="_on_randomize_button_pressed"]
+
+[editable path="MainContainer/CreatureDisplay/DisplayArea/CreatureSheet"]

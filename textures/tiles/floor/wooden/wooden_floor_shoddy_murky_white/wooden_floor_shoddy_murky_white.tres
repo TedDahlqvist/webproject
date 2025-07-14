@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="FloorItemData" load_steps=6 format=3 uid="uid://j1i0wq1lqcgg"]
+
+[ext_resource type="Texture2D" uid="uid://dm8muji31jjf1" path="res://assets/textures/tiles/floor/wooden/wooden_floor_shoddy_murky_white/wooden_floor_shoddy_murky_white.png" id="1_53yb0"]
+[ext_resource type="Script" uid="uid://b6sriogha1sbr" path="res://scripts/data/FloorItemData.cs" id="1_hu3ak"]
+[ext_resource type="PackedScene" uid="uid://b0bosxxcsqn6c" path="res://scenes/layers/floor_layer.tscn" id="2_p8gqv"]
+[ext_resource type="TileSet" uid="uid://bbstjb4myolk2" path="res://assets/tilesets/floor/wooden_floor_tileset.tres" id="3_vk86q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53yb0"]
+atlas = ExtResource("1_53yb0")
+region = Rect2(0, 96, 32, 32)
+
+[resource]
+script = ExtResource("1_hu3ak")
+Tileset = ExtResource("3_vk86q")
+TileId = -1
+TerrainSet = 0
+TerrainType = 4
+ItemName = "Shoddy Floor (Murky White)"
+MaterialType = 0
+Color = 6
+UniqueKey = ""
+Mode = 8
+Icon = SubResource("AtlasTexture_53yb0")
+Quantity = 1
+StructureScene = ExtResource("2_p8gqv")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b6sriogha1sbr"

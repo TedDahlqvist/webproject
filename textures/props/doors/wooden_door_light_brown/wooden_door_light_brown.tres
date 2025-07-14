@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="DoorItemData" load_steps=7 format=3 uid="uid://c538b2jm7a2f7"]
+
+[ext_resource type="Script" uid="uid://i8dgp43l6lct" path="res://scripts/data/DoorItemData.cs" id="1_qd3i0"]
+[ext_resource type="SpriteFrames" uid="uid://d0tjvn5yxsv05" path="res://assets/textures/props/doors/wooden_door_light_brown/wooden_door_light_brown_door_frames.tres" id="1_xgojb"]
+[ext_resource type="Texture2D" uid="uid://djy2swtw382p1" path="res://assets/textures/props/doors/wooden_door_light_brown/wooden_door_light_brown.png" id="2_3nj2e"]
+[ext_resource type="PackedScene" uid="uid://wve4nryl0sp6" path="res://scenes/props/door_piece.tscn" id="4_w0i3e"]
+[ext_resource type="Texture2D" uid="uid://csadllb6tga2u" path="res://assets/textures/props/walls/sprites/wooden_walls/wooden_walls_light_brown/wooden_walls_light_brown.png" id="5_rw0ej"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgojb"]
+atlas = ExtResource("2_3nj2e")
+region = Rect2(24, 376, 48, 48)
+
+[resource]
+script = ExtResource("1_qd3i0")
+AnimationFrames = ExtResource("1_xgojb")
+WallAtlas = ExtResource("5_rw0ej")
+ItemName = "Wooden Door (Light Brown)"
+MaterialType = 0
+Color = 1
+UniqueKey = ""
+Mode = 3
+Icon = SubResource("AtlasTexture_xgojb")
+Quantity = 1
+StructureScene = ExtResource("4_w0i3e")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://i8dgp43l6lct"

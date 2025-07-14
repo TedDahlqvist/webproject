@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="PathItemData" load_steps=6 format=3 uid="uid://is01u7kmuaoj"]
+
+[ext_resource type="Texture2D" uid="uid://ffhxovv10m0j" path="res://assets/textures/tiles/path/dirt-path/sandy_path_pale_yellow.png" id="1_ln02t"]
+[ext_resource type="Script" uid="uid://qho7o8oquex5" path="res://scripts/data/PathItemData.cs" id="1_qjqyl"]
+[ext_resource type="PackedScene" uid="uid://bwo1uvtbcki3a" path="res://scenes/layers/path_layer.tscn" id="2_pvixw"]
+[ext_resource type="TileSet" uid="uid://c0xarnk2awaxc" path="res://assets/tilesets/floor/dirt_path.tres" id="2_tqtca"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvixw"]
+atlas = ExtResource("1_ln02t")
+region = Rect2(0, 96, 32, 32)
+
+[resource]
+script = ExtResource("1_qjqyl")
+Tileset = ExtResource("2_tqtca")
+TileId = -1
+TerrainSet = 0
+TerrainType = 0
+ItemName = "Sandy Path (Medium Brown)"
+MaterialType = 4
+Color = 14
+UniqueKey = ""
+Mode = 11
+Icon = SubResource("AtlasTexture_pvixw")
+Quantity = 1
+StructureScene = ExtResource("2_pvixw")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://qho7o8oquex5"

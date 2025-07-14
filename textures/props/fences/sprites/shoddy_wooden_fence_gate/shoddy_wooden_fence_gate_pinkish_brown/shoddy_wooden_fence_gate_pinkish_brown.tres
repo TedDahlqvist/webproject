@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GateItemData" load_steps=6 format=3 uid="uid://bxm2tod8pgjtr"]
+
+[ext_resource type="Script" uid="uid://b6nmjrgglf5pg" path="res://scripts/data/GateItemData.cs" id="1_iymh4"]
+[ext_resource type="SpriteFrames" uid="uid://cpjun8su80m4i" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_pinkish_brown/shoddy_wooden_fence_gate_pinkish_brown_frames.tres" id="1_kpbwq"]
+[ext_resource type="Texture2D" uid="uid://bj5b0bbi0dovm" path="res://assets/textures/props/fences/sprites/shoddy_wooden_fence_gate/shoddy_wooden_fence_gate_pinkish_brown/shoddy_wooden_fence_gate_pinkish_brown.png" id="2_scdm3"]
+[ext_resource type="PackedScene" uid="uid://b58avry70crcj" path="res://scenes/props/gate_piece.tscn" id="3_scdm3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17ybk"]
+atlas = ExtResource("2_scdm3")
+region = Rect2(24, 416, 48, 56)
+
+[resource]
+script = ExtResource("1_iymh4")
+AnimationFrames = ExtResource("1_kpbwq")
+FencePostSpriteSheet = ExtResource("2_scdm3")
+ItemName = "Wooden Gate (Pinkish Brown)"
+MaterialType = 0
+Color = 4
+UniqueKey = ""
+Mode = 12
+Icon = SubResource("AtlasTexture_17ybk")
+Quantity = 1
+StructureScene = ExtResource("3_scdm3")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b6nmjrgglf5pg"

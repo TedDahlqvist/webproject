@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="FurnitureItemData" load_steps=10 format=3 uid="uid://cs1wsvghjmcyp"]
+
+[ext_resource type="Script" uid="uid://b5gjd705patw0" path="res://scripts/data/FurnitureItemData.cs" id="1_77lfe"]
+[ext_resource type="Resource" uid="uid://crfve27cdkk4r" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/north.tres" id="1_f18w6"]
+[ext_resource type="Resource" uid="uid://c7qgwtfrrxpxs" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/east.tres" id="2_x2qco"]
+[ext_resource type="Resource" uid="uid://bjmq0crmyh023" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/south.tres" id="3_ocnc6"]
+[ext_resource type="Resource" uid="uid://bj88hs753ph6a" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/west.tres" id="4_pgv06"]
+[ext_resource type="Texture2D" uid="uid://c7jiw3y3tkhjb" path="res://assets/textures/props/furniture/tables/shoddy_wooden_table _64x32/shoddy_wooden_table _64x32_murky_brown/shoddy_wooden_table _64x32_murky_brown.png" id="5_220c7"]
+[ext_resource type="PackedScene" uid="uid://61ireget7hk7" path="res://scenes/props/furniture_piece.tscn" id="6_wqpx3"]
+[ext_resource type="Texture2D" uid="uid://bgr7nn2sxir5c" path="res://assets/textures/shadows/shadow_64x32_square.png" id="6_x2qco"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul1sg"]
+atlas = ExtResource("5_220c7")
+region = Rect2(16, 64, 64, 64)
+
+[resource]
+script = ExtResource("1_77lfe")
+DirectionConfigs = Array[Object]([ExtResource("1_f18w6"), ExtResource("2_x2qco"), ExtResource("3_ocnc6"), ExtResource("4_pgv06")])
+SpriteSheet = ExtResource("5_220c7")
+SpriteSize = Vector2i(96, 128)
+ShadowTexture = ExtResource("6_x2qco")
+ItemName = "Medium Table (Murky Brown)"
+MaterialType = 0
+Color = 5
+UniqueKey = ""
+Mode = 10
+Icon = SubResource("AtlasTexture_ul1sg")
+Quantity = 1
+StructureScene = ExtResource("6_wqpx3")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b5gjd705patw0"

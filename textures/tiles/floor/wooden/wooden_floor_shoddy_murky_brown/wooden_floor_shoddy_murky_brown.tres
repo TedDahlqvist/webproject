@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="FloorItemData" load_steps=6 format=3 uid="uid://biurcy25we0fw"]
+
+[ext_resource type="Texture2D" uid="uid://bq2sa11elvnrc" path="res://assets/textures/tiles/floor/wooden/wooden_floor_shoddy_murky_brown/wooden_floor_shoddy_murky_brown.png" id="1_235mj"]
+[ext_resource type="Script" uid="uid://b6sriogha1sbr" path="res://scripts/data/FloorItemData.cs" id="1_m0rml"]
+[ext_resource type="PackedScene" uid="uid://b0bosxxcsqn6c" path="res://scenes/layers/floor_layer.tscn" id="2_qkklm"]
+[ext_resource type="TileSet" uid="uid://bbstjb4myolk2" path="res://assets/tilesets/floor/wooden_floor_tileset.tres" id="3_66kfp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_235mj"]
+atlas = ExtResource("1_235mj")
+region = Rect2(0, 96, 32, 32)
+
+[resource]
+script = ExtResource("1_m0rml")
+Tileset = ExtResource("3_66kfp")
+TileId = -1
+TerrainSet = 0
+TerrainType = 0
+ItemName = "Shoddy Floor (Murky Brown)"
+MaterialType = 0
+Color = 5
+UniqueKey = ""
+Mode = 8
+Icon = SubResource("AtlasTexture_235mj")
+Quantity = 1
+StructureScene = ExtResource("2_qkklm")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b6sriogha1sbr"

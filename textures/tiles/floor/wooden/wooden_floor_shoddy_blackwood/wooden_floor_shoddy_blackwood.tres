@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="FloorItemData" load_steps=6 format=3 uid="uid://0iq3t0pom63o"]
+
+[ext_resource type="Texture2D" uid="uid://dgmjkh3tdh8en" path="res://assets/textures/tiles/floor/wooden/wooden_floor_shoddy_blackwood/wooden_floor_shoddy_blackwood.png" id="1_p8d1o"]
+[ext_resource type="Script" uid="uid://b6sriogha1sbr" path="res://scripts/data/FloorItemData.cs" id="1_ywkwt"]
+[ext_resource type="PackedScene" uid="uid://b0bosxxcsqn6c" path="res://scenes/layers/floor_layer.tscn" id="2_gasu2"]
+[ext_resource type="TileSet" uid="uid://bbstjb4myolk2" path="res://assets/tilesets/floor/wooden_floor_tileset.tres" id="3_pwtyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al6vm"]
+atlas = ExtResource("1_p8d1o")
+region = Rect2(0, 96, 32, 32)
+
+[resource]
+script = ExtResource("1_ywkwt")
+Tileset = ExtResource("3_pwtyc")
+TileId = -1
+TerrainSet = 0
+TerrainType = 5
+ItemName = "Shoddy Floor (Blackwood)"
+MaterialType = 0
+Color = 0
+UniqueKey = ""
+Mode = 8
+Icon = SubResource("AtlasTexture_al6vm")
+Quantity = 1
+StructureScene = ExtResource("2_gasu2")
+Stackable = true
+MaxStack = 99
+metadata/_custom_type_script = "uid://b6sriogha1sbr"
