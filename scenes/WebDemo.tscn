@@ -24,10 +24,8 @@ outline_color = Color(0, 0, 0, 1)
 [node name="WebDemo" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 126.0
-offset_top = 125.0
-offset_right = 1326.0
-offset_bottom = 925.0
+offset_right = 1200.0
+offset_bottom = 800.0
 script = ExtResource("1_02ji8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
