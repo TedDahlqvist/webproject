@@ -221,7 +221,7 @@ func get_spritesheet_path(config: CreatureConfig) -> String:
 	print("🎨 Getting spritesheet path for: ", config.color_name, " saturation ", config.saturation_level, " color_variations enabled: ", enable_color_variations)
 	
 	if enable_color_variations:
-		# Use batch-converted color variation spritesheets if they exist
+		# Use batch-converted color variation spritesheets - ALWAYS try to load them
 		var age_prefix = ""
 		match config.age:
 			CreatureConfig.CreatureAge.YOUNG_ADULT:
@@ -237,15 +237,12 @@ func get_spritesheet_path(config: CreatureConfig) -> String:
 		var filename = age_prefix + "_" + config.color_name + "_saturation_" + str(config.saturation_level) + ".png"
 		var color_variation_path = "res://textures/actors/creatures/adult/" + age_folder + "/" + filename
 		
-		print("🔍 Checking for color variation file: ", color_variation_path)
+		print("🔍 Trying to load color variation file: ", color_variation_path)
 		
-		# Check if the color variation file exists, if not fall back to base spritesheet
-		if FileAccess.file_exists(color_variation_path):
-			print("✅ Found color variation file: ", color_variation_path)
-			return color_variation_path
-		else:
-			# Fall back to base spritesheet if color variation doesn't exist
-			print("❌ Color variation file not found: ", color_variation_path, ", falling back to base spritesheet")
+		# In web exports, FileAccess.file_exists() might not work properly, so just try to load it
+		# The load() function will return null if the file doesn't exist
+		print("✅ Using color variation file: ", color_variation_path)
+		return color_variation_path
 	
 	# Use base spritesheets (either when color variations disabled or as fallback)
 	var base_filename = ""
