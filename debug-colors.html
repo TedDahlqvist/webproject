@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Debug Instructions</title>
+    <style>
+        body { font-family: Arial; margin: 20px; background: #f0f0f0; }
+        .step { background: white; padding: 15px; margin: 10px 0; border-radius: 5px; border-left: 4px solid #4CAF50; }
+        .important { background: #fff3cd; border-left-color: #ffc107; }
+        code { background: #f8f9fa; padding: 2px 5px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>🐾 Color Variation Debug Steps</h1>
+    
+    <div class="step important">
+        <h3>⚠️ IMPORTANT: Enable Color Variations First!</h3>
+        <p>The color toggles will only work if you <strong>check the "Enable Color Variations" checkbox first</strong>!</p>
+    </div>
+    
+    <div class="step">
+        <h3>Step 1: Check Enable Color Variations</h3>
+        <p>✅ Click the <code>Enable Color Variations</code> checkbox at the top of the Color Palettes section</p>
+    </div>
+    
+    <div class="step">
+        <h3>Step 2: Test Individual Colors</h3>
+        <p>Now try unchecking and checking individual color boxes like:</p>
+        <ul>
+            <li>✅ Uncheck "Natural" - creature should avoid natural colors</li>
+            <li>✅ Check only "Blue" - creature should be blue</li>
+            <li>✅ Check only "Red" - creature should be red</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h3>Step 3: Click the Creature</h3>
+        <p>🖱️ Click directly on the creature sprite to generate a new one with your color settings</p>
+    </div>
+    
+    <div class="step">
+        <h3>Step 4: Check Browser Console</h3>
+        <p>Open Developer Tools (F12) and look for debug messages like:</p>
+        <ul>
+            <li><code>🎨 Getting spritesheet path for: [color]</code></li>
+            <li><code>✅ Found color variation file</code></li>
+            <li><code>🔄 Creature regenerated with new settings!</code></li>
+        </ul>
+    </div>
+    
+    <div class="step important">
+        <h3>🔍 If Colors Still Don't Work:</h3>
+        <p>The issue might be that the "Enable Color Variations" master switch is not being detected. Try:</p>
+        <ol>
+            <li>Refresh the page</li>
+            <li>Check "Enable Color Variations" first</li>
+            <li>Then modify individual color checkboxes</li>
+            <li>Click on the creature to regenerate</li>
+        </ol>
+    </div>
+    
+    <p><a href="http://localhost:8080/webexport.html" target="_blank">🎮 Open Game in New Tab</a></p>
+</body>
+</html>

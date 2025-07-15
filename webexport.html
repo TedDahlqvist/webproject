@@ -16,10 +16,15 @@ body {
 	background-color: black;
 	overflow: hidden;
 	touch-action: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 
 #canvas {
 	display: block;
+	margin: auto;
 }
 
 #canvas:focus {
@@ -111,7 +116,7 @@ body {
 
 		<script src="webexport.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"webexport","experimentalVK":false,"fileSizes":{"webexport.pck":10718624,"webexport.wasm":52126319},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":1,"ensureCrossOriginIsolationHeaders":false,"executable":"webexport","experimentalVK":false,"fileSizes":{"webexport.pck":10743696,"webexport.wasm":52126319},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
