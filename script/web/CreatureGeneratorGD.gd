@@ -47,6 +47,15 @@ var enable_young_adult: bool = true
 var enable_mid_adult: bool = true
 var enable_full_adult: bool = true
 
+# Individual color palette toggles
+var enable_natural: bool = true
+var enable_blue: bool = true
+var enable_brown: bool = true
+var enable_green: bool = true
+var enable_greyscale: bool = true
+var enable_purple: bool = true
+var enable_red: bool = true
+
 func _init(seed_value: int = -1):
 	rng = RandomNumberGenerator.new()
 	if seed_value != -1:
@@ -61,7 +70,7 @@ func generate_random_creature() -> CreatureConfig:
 	config.fur_type = get_seasonal_fur_type_from_debug_settings()
 	
 	# Color and saturation based on debug toggles
-	config.color_name = "natural" if not enable_color_variations else color_names[rng.randi() % color_names.size()]
+	config.color_name = "natural" if not enable_color_variations else get_random_enabled_color()
 	config.saturation_level = 2 if not enable_color_variations else get_random_enabled_saturation()
 	
 	# Single variant for body, multiple variants for other parts with debug controls
@@ -133,6 +142,29 @@ func get_random_enabled_saturation() -> int:
 	
 	return enabled_saturations[rng.randi() % enabled_saturations.size()]
 
+func get_random_enabled_color() -> String:
+	var enabled_colors = []
+	
+	if enable_natural:
+		enabled_colors.append("natural")
+	if enable_blue:
+		enabled_colors.append("blue")
+	if enable_brown:
+		enabled_colors.append("brown")
+	if enable_green:
+		enabled_colors.append("green")
+	if enable_greyscale:
+		enabled_colors.append("greyscale")
+	if enable_purple:
+		enabled_colors.append("purple")
+	if enable_red:
+		enabled_colors.append("red")
+	
+	if enabled_colors.is_empty():
+		return "natural"  # Default fallback
+	
+	return enabled_colors[rng.randi() % enabled_colors.size()]
+
 func get_random_face_variant() -> int:
 	var enabled_variants = []
 	
@@ -201,7 +233,7 @@ func get_spritesheet_path(config: CreatureConfig) -> String:
 		
 		var age_folder = age_prefix + "_color_variations"
 		var filename = age_prefix + "_" + config.color_name + "_saturation_" + str(config.saturation_level) + ".png"
-		var color_variation_path = "res://assets/textures/actors/creatures/adult/" + age_folder + "/" + filename
+		var color_variation_path = "res://textures/actors/creatures/adult/" + age_folder + "/" + filename
 		
 		# Check if the color variation file exists, if not fall back to base spritesheet
 		if FileAccess.file_exists(color_variation_path):

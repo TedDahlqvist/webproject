@@ -22,31 +22,16 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
 [node name="WebDemo" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+size = Vector2(1200, 800)
 script = ExtResource("1_02ji8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 100
 material = SubResource("ShaderMaterial_mbeka")
 custom_minimum_size = Vector2(400, 400)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -144.0
-offset_top = -151.0
-offset_right = -851.0
-offset_bottom = -244.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.73951, 1.69733)
+layout_mode = 0
+size = Vector2(1200, 800)
 mouse_filter = 2
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -57,16 +42,9 @@ tile_map_data = PackedByteArray("AAAHAAUAAQACAAEAAAAHAAQAAQACAAEAAAAHAAMAAQACAAE
 tile_set = ExtResource("4_atgh0")
 
 [node name="MainContainer" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 1.0
-offset_bottom = -2.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+position = Vector2(20, 20)
+size = Vector2(1160, 760)
 
 [node name="CreatureDisplay" type="VBoxContainer" parent="MainContainer"]
 layout_mode = 2

@@ -40,6 +40,15 @@ var enable_young_adult: bool = true
 var enable_mid_adult: bool = true
 var enable_full_adult: bool = true
 
+# Individual color palette properties
+var enable_natural: bool = true
+var enable_blue: bool = true
+var enable_brown: bool = true
+var enable_green: bool = true
+var enable_greyscale: bool = true
+var enable_purple: bool = true
+var enable_red: bool = true
+
 # Sprite references
 @onready var body_sprite: Sprite2D = $BodySprite
 @onready var leg_sprite: Sprite2D = $LegSprite
@@ -104,6 +113,15 @@ func sync_debug_settings():
 	generator.enable_mid_adult = enable_mid_adult
 	generator.enable_full_adult = enable_full_adult
 	print("🎯 Age sync - Young: ", enable_young_adult, ", Mid: ", enable_mid_adult, ", Full: ", enable_full_adult)
+	
+	# Sync individual color palette settings
+	generator.enable_natural = enable_natural
+	generator.enable_blue = enable_blue
+	generator.enable_brown = enable_brown
+	generator.enable_green = enable_green
+	generator.enable_greyscale = enable_greyscale
+	generator.enable_purple = enable_purple
+	generator.enable_red = enable_red
 
 func randomize_creature():
 	sync_debug_settings()

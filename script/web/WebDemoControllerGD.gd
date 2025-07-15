@@ -235,6 +235,22 @@ func update_creature_settings():
 		creature_sheet.enable_color_variations = color_variations_checkbox.button_pressed
 		print("Color Variations: ", creature_sheet.enable_color_variations)
 	
+	# Individual color palette settings
+	if natural_checkbox:
+		creature_sheet.enable_natural = natural_checkbox.button_pressed
+	if blue_checkbox:
+		creature_sheet.enable_blue = blue_checkbox.button_pressed
+	if brown_checkbox:
+		creature_sheet.enable_brown = brown_checkbox.button_pressed
+	if green_checkbox:
+		creature_sheet.enable_green = green_checkbox.button_pressed
+	if greyscale_checkbox:
+		creature_sheet.enable_greyscale = greyscale_checkbox.button_pressed
+	if purple_checkbox:
+		creature_sheet.enable_purple = purple_checkbox.button_pressed
+	if red_checkbox:
+		creature_sheet.enable_red = red_checkbox.button_pressed
+	
 	# Saturation levels
 	if saturation_1_checkbox:
 		creature_sheet.enable_saturation_1 = saturation_1_checkbox.button_pressed
