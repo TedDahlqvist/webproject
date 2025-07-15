@@ -23,3 +23,7 @@ window/size/viewport_height=800
 [dotnet]
 
 project/assembly_name="webproject"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
