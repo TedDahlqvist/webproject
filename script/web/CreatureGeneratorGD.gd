@@ -218,6 +218,8 @@ func get_random_crown_variant() -> int:
 	return (enabled_variants[rng.randi() % enabled_variants.size()] - 1)  # Convert to 0-based indexing
 
 func get_spritesheet_path(config: CreatureConfig) -> String:
+	print("🎨 Getting spritesheet path for: ", config.color_name, " saturation ", config.saturation_level, " color_variations enabled: ", enable_color_variations)
+	
 	if enable_color_variations:
 		# Use batch-converted color variation spritesheets if they exist
 		var age_prefix = ""
@@ -235,12 +237,15 @@ func get_spritesheet_path(config: CreatureConfig) -> String:
 		var filename = age_prefix + "_" + config.color_name + "_saturation_" + str(config.saturation_level) + ".png"
 		var color_variation_path = "res://textures/actors/creatures/adult/" + age_folder + "/" + filename
 		
+		print("🔍 Checking for color variation file: ", color_variation_path)
+		
 		# Check if the color variation file exists, if not fall back to base spritesheet
 		if FileAccess.file_exists(color_variation_path):
+			print("✅ Found color variation file: ", color_variation_path)
 			return color_variation_path
 		else:
 			# Fall back to base spritesheet if color variation doesn't exist
-			print("Color variation file not found: ", color_variation_path, ", falling back to base spritesheet")
+			print("❌ Color variation file not found: ", color_variation_path, ", falling back to base spritesheet")
 	
 	# Use base spritesheets (either when color variations disabled or as fallback)
 	var base_filename = ""
@@ -254,7 +259,9 @@ func get_spritesheet_path(config: CreatureConfig) -> String:
 		_:
 			base_filename = "full-adult.png"
 	
-	return "res://art/Creatures/variation_spritesheet/" + base_filename
+	var fallback_path = "res://art/Creatures/variation_spritesheet/" + base_filename
+	print("📁 Using base spritesheet: ", fallback_path)
+	return fallback_path
 
 # Static helper methods for variant names
 static func get_feet_variant_name(variant: int) -> String:
